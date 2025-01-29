@@ -1,4 +1,4 @@
-# Hella Webinar 2025
+## Hella Webinar 2025
 
 Code Repository for the webinar
 
@@ -6,22 +6,23 @@ Code Repository for the webinar
 
 Step 1: Clone the Starter Code
 
-git clone https://github.com/vaibhavgrwl6/hella-webinar-2025.git
+`git clone https://github.com/vaibhavgrwl6/hella-webinar-2025.git`
+
 
 Step 2: Install Dependencies
 
-pip install -r backend/requirements.txt
+`pip install -r backend/requirements.txt`
 
 Step 3: Run Locally
 
-python backend/app.py
+`python backend/app.py`
 
 
 ### Deploy Backend using AWS Lambda & API Gateway
 
 Step 1: Package & Deploy Python Flask App
 
-zip -r function.zip backend/*
+`zip -r function.zip backend/*`
 
 Step 2: Upload to AWS Lambda 
 

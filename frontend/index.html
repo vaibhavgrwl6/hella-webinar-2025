@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Social Awareness Hub</title>
+</head>
+<body>
+    <h1>Submit Your Idea for a Better World</h1>
+    <form id="ideaForm">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <textarea id="idea" placeholder="Your Idea" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+    <p id="response"></p>
+
+    <script>
+        document.getElementById("ideaForm").addEventListener("submit", async function(event) {
+            event.preventDefault();
+            let name = document.getElementById("name").value;
+            let idea = document.getElementById("idea").value;
+            
+            let response = await fetch("<LAMBDA_API_URL>", {
+                method: "POST",
+                body: JSON.stringify({ name, idea }),
+                headers: { "Content-Type": "application/json" }
+            });
+
+            let result = await response.json();
+            document.getElementById("response").innerText = result.message;
+        });
+    </script>
+</body>
+</html>
