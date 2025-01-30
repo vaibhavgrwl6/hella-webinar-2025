@@ -11,7 +11,7 @@ Step 1: Clone the Starter Code
 
 Step 2: Install Dependencies
 
-`pip install -r backend/requirements.txt`
+`pip install <dependecy_name> -t backend/`
 
 Step 3: Run Locally
 

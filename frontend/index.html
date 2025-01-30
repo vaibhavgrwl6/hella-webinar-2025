@@ -18,7 +18,7 @@
             let name = document.getElementById("name").value;
             let idea = document.getElementById("idea").value;
             
-            let response = await fetch("<LAMBDA_API_URL>", {
+            let response = await fetch("https://g1vewp0sf7.execute-api.ap-south-1.amazonaws.com/prod/submit", {
                 method: "POST",
                 body: JSON.stringify({ name, idea }),
                 headers: { "Content-Type": "application/json" }
